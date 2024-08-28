@@ -45,16 +45,16 @@ const nextBirthdayUser = sortedData[0];
 const otherUsers = sortedData.filter((user) => user.id !== nextBirthdayUser.id);
 
 const funnyMessages = [
-  "Faltam poucos dias para o show!",
-  "Preparando o bolo, aguarde...",
-  "A contagem regressiva já começou!",
-  "Em breve será hora da festa!",
-  "Segure o confete, o aniversário está chegando!",
-  "Prepare a pista de dança, a festa vem aí!",
-  "Contagem regressiva: quase lá!",
-  "Prepare-se para a celebração!",
-  "Está quase na hora de cantar parabéns!",
-  "Aniversário à vista! Já pode se preparar para a festa!",
+  "A alegria do Senhor é a nossa força! O grande dia está chegando!",
+  "Prepare-se para uma celebração cheia de bênçãos!",
+  "Em breve, celebraremos a vida que Deus nos deu!",
+  "A contagem regressiva para um dia abençoado já começou!",
+  "Comemorar a vida é uma dádiva! O aniversário está próximo!",
+  "Prepare seu coração para um dia cheio de graças e louvores!",
+  "Falta pouco para celebrarmos mais um ano de bênçãos!",
+  "A festa está chegando e a gratidão também!",
+  "Estamos nos aproximando de um dia de celebração e louvor!",
+  "Em breve, vamos agradecer a Deus pelo dom da vida do aniversariante!",
 ];
 
 // Função para obter uma mensagem engraçada aleatória
