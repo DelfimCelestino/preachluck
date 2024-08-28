@@ -1,5 +1,6 @@
 import { BorderBeam } from "@/components/magicui/border-beam";
 import TypingAnimation from "@/components/magicui/typing-animation";
+import { ModeToggle } from "@/components/mode-toggle";
 import { data, felicitacoes } from "@/data/data";
 import { format, isBefore, addYears, isToday } from "date-fns";
 import { ptBR } from "date-fns/locale";
@@ -76,6 +77,7 @@ const Home = () => {
         className="text-xs font-bold text-black dark:text-white uppercase text-start"
         text="Jovens Shekinah"
       />
+      <ModeToggle />
       <div className="highlight-title">
         <h2 className="text-lg font-bold text-center">{highlightTitle}</h2>
       </div>
