@@ -1,7 +1,7 @@
 import { BorderBeam } from "@/components/magicui/border-beam";
 import TypingAnimation from "@/components/magicui/typing-animation";
 import { data, felicitacoes } from "@/data/data";
-import { format, isBefore, addYears } from "date-fns";
+import { format, isBefore, addYears, isToday } from "date-fns";
 import { ptBR } from "date-fns/locale";
 
 interface User {
@@ -62,10 +62,13 @@ const getRandomFunnyMessage = (): string => {
 };
 
 const Home = () => {
-  // Seleciona o próximo usuário que vai fazer aniversário
-  const user = nextBirthdayUser;
-  const congratulations =
-    felicitacoes[Math.floor(Math.random() * felicitacoes.length)];
+  // Verifica se o próximo aniversário é hoje
+  const isTodayBirthday = isToday(getNextBirthday(nextBirthdayUser.birthday));
+
+  // Seleciona a mensagem apropriada
+  const highlightTitle = isTodayBirthday
+    ? "Parabéns ao aniversariante de hoje!"
+    : "Próximo aniversário";
 
   return (
     <div className="wrapper grid gap-2">
@@ -73,31 +76,36 @@ const Home = () => {
         className="text-xs font-bold text-black dark:text-white uppercase text-start"
         text="Jovens Shekinah"
       />
+      <div className="highlight-title">
+        <h2 className="text-lg font-bold text-center">{highlightTitle}</h2>
+      </div>
       <div className="relative flex p-4 w-full overflow-hidden rounded-lg border bg-background md:shadow-xl">
         <div className="grid grid-cols-10 gap-2">
           <div className="col-span-2">
             <div className="w-12 h-12">
               <img
-                src={user?.image}
-                alt={user?.name}
+                src={nextBirthdayUser?.image}
+                alt={nextBirthdayUser?.name}
                 className="w-full h-full rounded-full"
               />
             </div>
           </div>
           <div className="grid col-span-8">
-            <h1 className="font-bold">{user?.name}</h1>
+            <h1 className="font-bold">{nextBirthdayUser?.name}</h1>
             <p className="text-sm text-muted-foreground">
-              {format(getNextBirthday(user?.birthday), "dd MMMM", {
+              {format(getNextBirthday(nextBirthdayUser?.birthday), "dd MMMM", {
                 locale: ptBR,
               })}
             </p>
-            <p className="text-sm text-muted-foreground">{congratulations}</p>
+            <p className="text-sm text-muted-foreground">
+              {felicitacoes[Math.floor(Math.random() * felicitacoes.length)]}
+            </p>
           </div>
         </div>
         <BorderBeam size={250} duration={12} delay={9} />
       </div>
 
-      <ol className="relative border-s border-gray-200 dark:border-gray-700">
+      <ol className="relative border-s border-gray-200 dark:border-gray-700 grid gap-8">
         {otherUsers.map((person, index) => (
           <li key={index} className="ms-4">
             <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
