@@ -1,3 +1,4 @@
+import { MarqueeDemo } from "@/components/card-sliders";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import TypingAnimation from "@/components/magicui/typing-animation";
 import { ModeToggle } from "@/components/mode-toggle";
@@ -73,11 +74,11 @@ const Home = () => {
 
   return (
     <div className="wrapper grid gap-2">
+      <ModeToggle />
       <TypingAnimation
         className="text-xs font-bold text-black dark:text-white uppercase text-start"
         text="Jovens Shekinah"
       />
-      <ModeToggle />
       <div className="highlight-title">
         <h2 className="text-lg font-bold text-center">{highlightTitle}</h2>
       </div>
@@ -106,6 +107,7 @@ const Home = () => {
         </div>
         <BorderBeam size={250} duration={12} delay={9} />
       </div>
+      <MarqueeDemo />
 
       <ol className="relative border-s border-gray-200 dark:border-gray-700 grid gap-8">
         {otherUsers.map((person, index) => (
