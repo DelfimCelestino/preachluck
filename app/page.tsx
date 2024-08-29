@@ -73,60 +73,67 @@ const Home = () => {
     : "Próximo aniversário";
 
   return (
-    <div className="wrapper grid gap-2">
-      <ModeToggle />
-      <TypingAnimation
-        className="text-xs font-bold text-black dark:text-white uppercase text-start"
-        text="Jovens Shekinah"
-      />
-      <div className="highlight-title">
-        <h2 className="text-lg font-bold text-center">{highlightTitle}</h2>
-      </div>
-      <div className="relative flex p-4 w-full overflow-hidden rounded-lg border bg-background md:shadow-xl">
-        <div className="grid grid-cols-10 gap-2">
-          <div className="col-span-2">
-            <div className="w-12 h-12">
-              <img
-                src={nextBirthdayUser?.image}
-                alt={nextBirthdayUser?.name}
-                className="w-full h-full rounded-full"
-              />
+    <div>
+      <div className="wrapper grid gap-2">
+        <ModeToggle />
+        <TypingAnimation
+          className="text-xs font-bold text-black dark:text-white uppercase text-start"
+          text="Jovens Shekinah"
+        />
+        <div className="highlight-title">
+          <h2 className="text-lg font-bold text-center">{highlightTitle}</h2>
+        </div>
+        <div className="relative flex p-4 w-full overflow-hidden rounded-lg border bg-background md:shadow-xl">
+          <div className="grid grid-cols-10 gap-2">
+            <div className="col-span-2">
+              <div className="w-12 h-12">
+                <img
+                  src={nextBirthdayUser?.image}
+                  alt={nextBirthdayUser?.name}
+                  className="w-full h-full rounded-full"
+                />
+              </div>
+            </div>
+            <div className="grid col-span-8">
+              <h1 className="font-bold">{nextBirthdayUser?.name}</h1>
+              <p className="text-sm text-muted-foreground">
+                {format(
+                  getNextBirthday(nextBirthdayUser?.birthday),
+                  "dd MMMM",
+                  {
+                    locale: ptBR,
+                  }
+                )}
+              </p>
+              <p className="text-sm text-muted-foreground">
+                {felicitacoes[Math.floor(Math.random() * felicitacoes.length)]}
+              </p>
             </div>
           </div>
-          <div className="grid col-span-8">
-            <h1 className="font-bold">{nextBirthdayUser?.name}</h1>
-            <p className="text-sm text-muted-foreground">
-              {format(getNextBirthday(nextBirthdayUser?.birthday), "dd MMMM", {
-                locale: ptBR,
-              })}
-            </p>
-            <p className="text-sm text-muted-foreground">
-              {felicitacoes[Math.floor(Math.random() * felicitacoes.length)]}
-            </p>
-          </div>
+          <BorderBeam size={250} duration={12} delay={9} />
         </div>
-        <BorderBeam size={250} duration={12} delay={9} />
       </div>
       <MarqueeDemo />
-
-      <ol className="relative border-s border-gray-200 dark:border-gray-700 grid gap-8">
-        {otherUsers.map((person, index) => (
-          <li key={index} className="ms-4">
-            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-            <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              {format(getNextBirthday(person.birthday), "dd MMMM", {
-                locale: ptBR,
-              })}
-            </time>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-              {person.name}
-            </h3>
-            <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-              {getRandomFunnyMessage()}
-            </p>
-          </li>
-        ))}
-      </ol>
+      <div className="wrapper grid gap-2">
+        <ol className="relative border-s border-gray-200 dark:border-gray-700 grid gap-8">
+          {otherUsers.map((person, index) => (
+            <li key={index} className="ms-4">
+              <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+              <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                {format(getNextBirthday(person.birthday), "dd MMMM", {
+                  locale: ptBR,
+                })}
+              </time>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                {person.name}
+              </h3>
+              <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+                {getRandomFunnyMessage()}
+              </p>
+            </li>
+          ))}
+        </ol>
+      </div>
     </div>
   );
 };
