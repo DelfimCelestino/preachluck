@@ -65,6 +65,17 @@ export const data: Array<{
     image: "https://github.com/Obra.png",
   },
   {
+    id: 11,
+    name: "Jennifer",
+    birthday: "25/04",
+    gender: "Non-binary",
+    address: "Endereço",
+    phone: "Número de telefone",
+    email: "email@exemplo.com",
+    status: "Active",
+    image: "https://github.com/jennifer.png",
+  },
+  {
     id: 6,
     name: "Nucha Ramos",
     birthday: "25/06",
