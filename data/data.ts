@@ -18,7 +18,8 @@ export const data: Array<{
     phone: "Número de telefone",
     email: "email@exemplo.com",
     status: "Active",
-    image: "https://github.com/Dorcas.png",
+    image:
+      "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-avatar-placeholder-png-image_3416697.jpg",
   },
   {
     id: 2,
@@ -29,7 +30,8 @@ export const data: Array<{
     phone: "Número de telefone",
     email: "email@exemplo.com",
     status: "Active",
-    image: "https://github.com/Evalenia.png",
+    image:
+      "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-avatar-placeholder-png-image_3416697.jpg",
   },
   {
     id: 3,
@@ -40,7 +42,8 @@ export const data: Array<{
     phone: "Número de telefone",
     email: "email@exemplo.com",
     status: "Active",
-    image: "https://github.com/Etelvino.png",
+    image:
+      "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-avatar-placeholder-png-image_3416697.jpg",
   },
   {
     id: 4,
@@ -51,7 +54,8 @@ export const data: Array<{
     phone: "Número de telefone",
     email: "email@exemplo.com",
     status: "Active",
-    image: "https://github.com/Marcia.png",
+    image:
+      "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-avatar-placeholder-png-image_3416697.jpg",
   },
   {
     id: 5,
@@ -62,7 +66,8 @@ export const data: Array<{
     phone: "Número de telefone",
     email: "email@exemplo.com",
     status: "Active",
-    image: "https://github.com/Obra.png",
+    image:
+      "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-avatar-placeholder-png-image_3416697.jpg",
   },
   {
     id: 11,
@@ -73,7 +78,8 @@ export const data: Array<{
     phone: "Número de telefone",
     email: "email@exemplo.com",
     status: "Active",
-    image: "https://github.com/jennifer.png",
+    image:
+      "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-avatar-placeholder-png-image_3416697.jpg",
   },
   {
     id: 6,
@@ -84,7 +90,8 @@ export const data: Array<{
     phone: "Número de telefone",
     email: "email@exemplo.com",
     status: "Active",
-    image: "https://github.com/Nucha.png",
+    image:
+      "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-avatar-placeholder-png-image_3416697.jpg",
   },
   {
     id: 7,
@@ -95,7 +102,8 @@ export const data: Array<{
     phone: "Número de telefone",
     email: "email@exemplo.com",
     status: "Active",
-    image: "https://github.com/Victorino.png",
+    image:
+      "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-avatar-placeholder-png-image_3416697.jpg",
   },
   {
     id: 8,
@@ -106,7 +114,8 @@ export const data: Array<{
     phone: "Número de telefone",
     email: "email@exemplo.com",
     status: "Active",
-    image: "https://github.com/Grey.png",
+    image:
+      "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-avatar-placeholder-png-image_3416697.jpg",
   },
   {
     id: 9,
@@ -128,7 +137,8 @@ export const data: Array<{
     phone: "Número de telefone",
     email: "email@exemplo.com",
     status: "Active",
-    image: "https://github.com/Gerson.png",
+    image:
+      "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-avatar-placeholder-png-image_3416697.jpg",
   },
   {
     id: 11,
@@ -139,7 +149,8 @@ export const data: Array<{
     phone: "Número de telefone",
     email: "email@exemplo.com",
     status: "Active",
-    image: "https://github.com/Neyma.png",
+    image:
+      "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-avatar-placeholder-png-image_3416697.jpg",
   },
   {
     id: 12,
@@ -150,7 +161,8 @@ export const data: Array<{
     phone: "Número de telefone",
     email: "email@exemplo.com",
     status: "Active",
-    image: "https://github.com/Nazma.png",
+    image:
+      "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-avatar-placeholder-png-image_3416697.jpg",
   },
   {
     id: 13,
@@ -161,7 +173,8 @@ export const data: Array<{
     phone: "Número de telefone",
     email: "email@exemplo.com",
     status: "Active",
-    image: "https://github.com/Manuel.png",
+    image:
+      "https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-avatar-placeholder-png-image_3416697.jpg",
   },
 ];
 
